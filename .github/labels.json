@@ -1,0 +1,18 @@
+{
+  "context": [
+    "mobile",
+    "backend",
+    "frontend",
+    "pm",
+    "qa",
+    "game",
+    "data-science",
+    "database",
+    "embedded",
+    "cyber-security",
+    "blockchain"
+  ],
+  "internLocation": ["uzaktan", "yüzyüze"],
+  "internType": ["gönüllü", "zorunlu"],
+  "internDuration": ["4hafta", "6hafta"]
+}

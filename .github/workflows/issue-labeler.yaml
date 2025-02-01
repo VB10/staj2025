@@ -1,0 +1,146 @@
+name: Automatic Issue Labeler
+
+on:
+  issues:
+    types: [opened, edited]
+
+jobs:
+  add-labels:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+
+      - name: Read Labels JSON
+        id: labels
+        uses: actions/github-script@0.9.0
+        with:
+          script: |
+            const fs = require('fs');
+            const path = './.github/labels.json';
+            const content = fs.readFileSync(path);
+            const labels = JSON.parse(content);
+            return labels;
+
+      - name: Check issue title format
+        id: check_format
+        uses: actions/github-script@0.9.0
+        with:
+          github-token: ${{ secrets.INTERN }}
+          script: |
+            const issueTitle = context.payload.issue.title;
+            const labels = ${{ steps.labels.outputs.result }}
+            const labelGroups = issueTitle.match(/\[([^\]]+)\]/g);
+
+            if (labelGroups.length !== Object.keys(labels).length) {
+              return false;
+            }
+
+            const isValid = labelGroups.every((group, index) => {
+              const tags = group.match(/[^,\[\]]+/g).map(tag => tag.trim());
+              const field = Object.keys(labels)[index];
+              const validLabels = labels[field];
+              return tags.every(tag => validLabels.includes(tag));
+            });
+
+            return isValid;
+
+
+
+      - name: Add comment and close issue if format is invalid
+        if: ${{ steps.check_format.outputs.result == 'false' }}
+        uses: actions/github-script@0.9.0
+        with:
+          github-token: ${{ secrets.INTERN }}
+          script: |
+            const issueNumber = context.issue.number;
+            // Uygun format mesajı
+            const comment = `
+              Merhaba @${context.actor}, bu issue'nun başlığı belirlenen formata uymuyor.
+              Lütfen başlığı "AD-SOYAD [ALAN][STAJ YERİ][STAJ TİPİ][STAJ SÜRESİ]" formatına uygun hale getirin.
+              Örnekler için:
+              https://github.com/VB10/staj_2024/issues/1
+              Bu işlemi tamamladıktan sonra issue'yu başlığını güncellemen yeterli olacak.
+            `;
+            // Issue'ya yorum ekle
+            github.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issueNumber,
+              body: comment
+            });
+            // Issue'yu kapat
+            github.issues.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issueNumber,
+              state: 'closed'
+            });
+
+      - name: Label the issue
+        uses: actions/github-script@0.9.0
+        if: ${{ steps.check_format.outputs.result == 'true' }}
+        with:
+          github-token: ${{ secrets.INTERN }}
+          script: |
+            const title = context.payload.issue.title;
+            const issue_number = context.issue.number;
+            const issue_author = context.payload.issue.user.login;
+            const issueUrl = context.payload.issue.html_url;
+            const issueState = context.payload.issue.state;
+            const labelsToAdd = [];
+            const fields = ${{ steps.labels.outputs.result }}
+
+
+            let validGroupCount = 0;
+
+            const labelGroups = title.match(/\[([^\]]+)\]/g);
+            labelGroups.forEach(group => {
+              const tags = group.match(/[^,\[\]]+/g).map(tag => tag.trim());
+              tags.forEach(tag => {
+                for (const [field, validLabels] of Object.entries(fields)) {
+                  if (validLabels.includes(tag)) {
+                    validGroupCount++;
+                    labelsToAdd.push(tag);
+                  }
+                }
+              });
+            });
+
+
+            const wasClosed = issueState === 'closed';
+
+            if (wasClosed){
+                await github.issues.update({
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    issue_number: issue_number,
+                    state: 'open'
+                  });
+            }
+
+            await github.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issue_number,
+              labels: labelsToAdd
+            })
+
+            await github.issues.addAssignees({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issue_number,
+                assignees: [issue_author]
+              });
+
+            const comment = `
+              Merhaba @${context.actor}, staj başvurun başarı ile taglendi..
+              Lütfen staj bulduktan sonra buraya gelip kapatmayı unutma.
+              Şimdiden bol şans ve sakın unutma staj ne başlangıç ne son çok çalışmak lazım.
+            `;
+            await github.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issue_number,
+                body: comment
+              });
