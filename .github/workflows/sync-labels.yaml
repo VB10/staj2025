@@ -61,27 +61,44 @@ jobs:
 
             const existingLabelNames = existingLabels.data.map(label => label.name);
 
-            // Create context labels
-            for (const contextLabel of labelsData.context) {
-              if (!existingLabelNames.includes(contextLabel)) {
+            // Helper function to create labels
+            async function createLabel(name, category) {
+              if (!existingLabelNames.includes(name)) {
                 try {
                   const randomColor = Math.floor(Math.random()*16777215).toString(16).padStart(6, '0');
                   
                   await github.rest.issues.createLabel({
                     owner: owner,
                     repo: repo,
-                    name: contextLabel,
+                    name: name,
                     color: randomColor,
-                    description: `Context: ${contextLabel}`
+                    description: `${category}: ${name}`
                   });
-                  console.log(`Created label: ${contextLabel} with color: #${randomColor}`);
+                  console.log(`Created label: ${name} with color: #${randomColor}`);
                 } catch (error) {
-                  console.error(`Error creating label ${contextLabel}:`, error);
+                  console.error(`Error creating label ${name}:`, error);
                 }
               }
             }
 
-            // Check for issues without context labels when PR is merged
+            // Create labels for all categories
+            for (const contextLabel of labelsData.context) {
+              await createLabel(contextLabel, 'Context');
+            }
+
+            for (const locationLabel of labelsData.internLocation) {
+              await createLabel(locationLabel, 'Intern Location');
+            }
+
+            for (const typeLabel of labelsData.internType) {
+              await createLabel(typeLabel, 'Intern Type');
+            }
+
+            for (const durationLabel of labelsData.internDuration) {
+              await createLabel(durationLabel, 'Intern Duration');
+            }
+
+            // Check for issues without required labels when PR is merged
             if (context.eventName === 'pull_request' && context.payload.pull_request.merged) {
               const issues = await github.paginate(github.rest.issues.listForRepo, {
                 owner: owner,
@@ -93,16 +110,37 @@ jobs:
               for (const issue of issues) {
                 const issueLabels = issue.labels.map(label => label.name);
                 const hasContextLabel = issueLabels.some(label => labelsData.context.includes(label));
+                const hasLocationLabel = issueLabels.some(label => labelsData.internLocation.includes(label));
+                const hasTypeLabel = issueLabels.some(label => labelsData.internType.includes(label));
+                const hasDurationLabel = issueLabels.some(label => labelsData.internDuration.includes(label));
 
-                if (!hasContextLabel) {
-                  // Create a comment on issues without context labels
+                const missingCategories = [];
+                if (!hasContextLabel) missingCategories.push('Context');
+                if (!hasLocationLabel) missingCategories.push('Intern Location');
+                if (!hasTypeLabel) missingCategories.push('Intern Type');
+                if (!hasDurationLabel) missingCategories.push('Intern Duration');
+
+                if (missingCategories.length > 0) {
+                  const categoryLabels = {
+                    'Context': labelsData.context,
+                    'Intern Location': labelsData.internLocation,
+                    'Intern Type': labelsData.internType,
+                    'Intern Duration': labelsData.internDuration
+                  };
+
+                  let comment = '⚠️ This issue is missing the following required labels:\n\n';
+                  for (const category of missingCategories) {
+                    comment += `- ${category}: ${categoryLabels[category].join(', ')}\n`;
+                  }
+
                   await github.rest.issues.createComment({
                     owner: owner,
                     repo: repo,
                     issue_number: issue.number,
-                    body: `⚠️ This issue is missing a context label. Please add one of the following labels: ${labelsData.context.join(', ')}`
+                    body: comment
                   });
-                  console.log(`Added comment to issue #${issue.number} about missing context label`);
+                  console.log(`Added comment to issue #${issue.number} about missing labels`);
                 }
               }
             }
+
