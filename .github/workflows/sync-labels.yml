@@ -3,44 +3,73 @@ name: Sync Labels
 on:
   push:
     paths:
-      - '.github/labels.json'
+      - ".github/labels.json"
     branches:
       - main
+  pull_request:
+    types: [closed]
+    
+  workflow_dispatch:
 
 jobs:
   sync-labels:
     runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true || github.event_name == 'push'
     steps:
       - uses: actions/checkout@v4
 
       - name: Install dependencies
         run: npm install @octokit/rest
 
-      - name: Create/Sync Labels
+      - name: Create/Sync Labels and Check Issues
         uses: actions/github-script@v7
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           script: |
             const fs = require('fs');
             const labelsData = JSON.parse(fs.readFileSync('.github/labels.json', 'utf8'));
+
+            // Try to get repository info from multiple sources
+            let owner, repo;
             
-            // Get existing labels
+            if (process.env.GITHUB_REPOSITORY) {
+              [owner, repo] = process.env.GITHUB_REPOSITORY.split('/');
+            } else {
+              owner = process.env.GITHUB_REPOSITORY_OWNER;
+              repo = process.env.GITHUB_REPOSITORY_NAME;
+            }
+
+            // Fallback to context if environment variables are not set
+            owner = owner || context.repo?.owner;
+            repo = repo || context.repo?.name;
+
+            console.log('Debug Information:');
+            console.log(`GITHUB_REPOSITORY: ${process.env.GITHUB_REPOSITORY}`);
+            console.log(`GITHUB_REPOSITORY_OWNER: ${process.env.GITHUB_REPOSITORY_OWNER}`);
+            console.log(`GITHUB_REPOSITORY_NAME: ${process.env.GITHUB_REPOSITORY_NAME}`);
+            console.log(`Final values - Owner: ${owner}, Repo: ${repo}`);
+
+            if (!owner || !repo) {
+              throw new Error(`Repository information is incomplete. Owner: ${owner}, Repo: ${repo}`);
+            }
+
             const existingLabels = await github.rest.issues.listLabelsForRepo({
-              owner: context.repo.owner,
-              repo: context.repo.name,
+              owner: owner,
+              repo: repo,
             });
-            
+
             const existingLabelNames = existingLabels.data.map(label => label.name);
-            
+
             // Create context labels
             for (const contextLabel of labelsData.context) {
               if (!existingLabelNames.includes(contextLabel)) {
                 try {
-                  // Generate random hex color without '#'
                   const randomColor = Math.floor(Math.random()*16777215).toString(16).padStart(6, '0');
                   
                   await github.rest.issues.createLabel({
-                    owner: context.repo.owner,
-                    repo: context.repo.name,
+                    owner: owner,
+                    repo: repo,
                     name: contextLabel,
                     color: randomColor,
                     description: `Context: ${contextLabel}`
@@ -50,4 +79,30 @@ jobs:
                   console.error(`Error creating label ${contextLabel}:`, error);
                 }
               }
-            } 
+            }
+
+            // Check for issues without context labels when PR is merged
+            if (context.eventName === 'pull_request' && context.payload.pull_request.merged) {
+              const issues = await github.paginate(github.rest.issues.listForRepo, {
+                owner: owner,
+                repo: repo,
+                state: 'open',
+                per_page: 100
+              });
+
+              for (const issue of issues) {
+                const issueLabels = issue.labels.map(label => label.name);
+                const hasContextLabel = issueLabels.some(label => labelsData.context.includes(label));
+
+                if (!hasContextLabel) {
+                  // Create a comment on issues without context labels
+                  await github.rest.issues.createComment({
+                    owner: owner,
+                    repo: repo,
+                    issue_number: issue.number,
+                    body: `⚠️ This issue is missing a context label. Please add one of the following labels: ${labelsData.context.join(', ')}`
+                  });
+                  console.log(`Added comment to issue #${issue.number} about missing context label`);
+                }
+              }
+            }
