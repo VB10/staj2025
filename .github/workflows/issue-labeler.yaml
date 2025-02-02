@@ -45,8 +45,6 @@ jobs:
 
             return isValid;
 
-
-
       - name: Add comment and close issue if format is invalid
         if: ${{ steps.check_format.outputs.result == 'false' }}
         uses: actions/github-script@0.9.0
