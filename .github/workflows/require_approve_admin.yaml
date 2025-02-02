@@ -1,0 +1,32 @@
+name: Require Approval By Repository Owner
+on:
+  pull_request:
+    types: [opened, edited, synchronize]
+
+jobs:
+  check-approval:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Approval
+        uses: actions/github-script@v6
+        env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          script: |
+            // Get repository owner
+            const repoOwner = context.repo.owner;
+            
+            // Get PR reviews
+            const { data: reviews } = await github.rest.pulls.listReviews({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.payload.pull_request.number,
+            });
+            
+            const approvedByOwner = reviews.some(review => 
+              review.user.login === repoOwner && review.state === 'APPROVED'
+            );
+
+            if (!approvedByOwner) {
+              core.setFailed(`This PR must be approved by the repository owner (${repoOwner}) before merging.`);
+            }

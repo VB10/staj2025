@@ -79,11 +79,16 @@ Açılan **issue**, formata uygun değilse otomatik olarak kapanacaktır.
 
 Evet, başvurabilirsiniz. Ancak önceliğimiz daima **zorunlu staj** yapması gereken arkadaşlar olacaktır.
 
+#### Uzun dönem staj yapmak istiyorum ama alanlarda göremedim. Ne yapmalıyım? (3 veya 6 ay)
+  Burada daha çok yaz dönemi stajını hedefliyoruz. Ondan dolayı uzun dönem staj yer almayacak. Ek olarak staj dönemleri bittiğinde repo kapatılıp tüm bilgiler silinecektir.
+
 #### İyi bir repom yok, bu bir sorun mu?
 
 Öğrencilik döneminde olmamanız bir sorun değil. Ancak henüz zaman varken, bir alanda örnek bir repo hazırlamak çok değerli olacaktır. Bu noktada, [https://www.uplabs.com/](https://www.uplabs.com/) gibi platformlardan bir tasarım seçip, ister **backend**, ister **mobil**, isterseniz **frontend/web** olarak kodlayabilirsiniz.
 
 Bu yazı bu konuda yardımcı olacaktır: [ilk-adımını-at-ekip-çalışmasıyla-proje-geliştirme-rehberi](https://medium.com/@vbacik-10/i̇lk-adımını-at-ekip-çalışmasıyla-proje-geliştirme-rehberi-1a794972e724)
+
+
 
 # Geçmiş Dönemler
 
