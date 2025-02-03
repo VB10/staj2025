@@ -28,6 +28,8 @@ Başta zorunlu staj ihtiyacı olan öğrenci arkadaşlar ile stajyer almak istey
   
 - Bu bilgiler dışında başka bir format kabul edilmemektedir. Örneklere bakarak birden fazla giriş yapabilirsiniz.
 
+- **Formata uygun olmayan başlıklar otomatik olarak kapatılacaktır. Tekrar açılması için başlığı güncellemeniz yeterli olacaktır.**
+
 > Yeni eklemeler duruma göre olacaktır. Önerisi olan label.json içinde ekleyip pr da atabilir.
 
 ## 📍 Örnek başvuru başlıkları
