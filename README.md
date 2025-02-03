@@ -24,7 +24,7 @@ Başta zorunlu staj ihtiyacı olan öğrenci arkadaşlar ile stajyer almak istey
   `["zorunlu", "gönüllü"]`
   
 - **Staj Süresi** için şu seçeneklerden biri belirtilmelidir:  
-  `["4hafta", "6hafta"]`
+  `["4-hafta", "6-hafta"]`
   
 - Bu bilgiler dışında başka bir format kabul edilmemektedir. Örneklere bakarak birden fazla giriş yapabilirsiniz.
 
@@ -33,14 +33,14 @@ Başta zorunlu staj ihtiyacı olan öğrenci arkadaşlar ile stajyer almak istey
 ## 📍 Örnek başvuru başlıkları
 
 ```yaml
-Veli Bacik [pm,qa][uzaktan][zorunlu][4hafta]
-Veli Bacik [mobile,backend][uzaktan][zorunlu][4hafta]
-Veli Bacik [uzaktan][mobile,backend][zorunlu][4hafta]
-Veli Bacik [pm,qa][mobile,backend][zorunlu][4hafta]
-Veli Bacik4 [mobile,backend][uzaktan,zorunlu][yüzyüze][4hafta,6hafta]
-Veli Bacik 3 [mobile][gönüllü][zorunlu,yüzyüze][4hafta,6hafta]
-Veli Bacik 2 [mobile][uzaktan,gönüllü][zorunlu,yüzyüze][4hafta]
-Veli Bacik [pm,qa,data-science][uzaktan][zorunlu][4hafta]
+Veli Bacik [pm,qa][uzaktan][zorunlu][4-hafta]
+Veli Bacik [mobile,backend][uzaktan][zorunlu][4-hafta]
+Veli Bacik [uzaktan][mobile,backend][zorunlu][4-hafta]
+Veli Bacik [pm,qa][mobile,backend][zorunlu][4-hafta]
+Veli Bacik4 [mobile,backend][uzaktan,zorunlu][yüzyüze][4-hafta,6-hafta]
+Veli Bacik 3 [mobile][gönüllü][zorunlu,yüzyüze][4-hafta,6-hafta]
+Veli Bacik 2 [mobile][uzaktan,gönüllü][zorunlu,yüzyüze][4-hafta]
+Veli Bacik [pm,qa,data-science][uzaktan][zorunlu][4-hafta]
 ```
 
 ## 🤝 Katkıda Bulunma
