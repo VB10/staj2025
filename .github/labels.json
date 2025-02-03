@@ -15,5 +15,5 @@
   ],
   "internLocation": ["uzaktan", "yüzyüze"],
   "internType": ["gönüllü", "zorunlu"],
-  "internDuration": ["4-hafta", "6-hafta"]
+  "internDuration": ["4-hafta", "6-hafta", "12-hafta"]
 }
