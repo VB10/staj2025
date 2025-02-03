@@ -75,14 +75,14 @@ jobs:
               Bu işlemi tamamladıktan sonra issue'yu başlığını güncellemen yeterli olacak.
             `;
             // Issue'ya yorum ekle
-            await octokit.rest.issues.createComment({
+            await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: issueNumber,
               body: comment
             });
             // Issue'yu kapat
-            await octokit.rest.issues.update({
+            await github.rest.issues.update({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: issueNumber,
@@ -124,7 +124,7 @@ jobs:
             const wasClosed = issueState === 'closed';
 
             if (wasClosed) {
-              await octokit.rest.issues.update({
+              await github.rest.issues.update({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 issue_number: issue_number,
@@ -133,7 +133,7 @@ jobs:
             }
 
             if (labelsToAdd.size > 0) {
-              await octokit.rest.issues.addLabels({
+              await github.rest.issues.addLabels({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 issue_number: issue_number,
@@ -141,7 +141,7 @@ jobs:
               });
             }
 
-            await octokit.rest.issues.addAssignees({
+            await github.rest.issues.addAssignees({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 issue_number: issue_number,
@@ -153,7 +153,7 @@ jobs:
               Lütfen staj bulduktan sonra buraya gelip kapatmayı unutma.
               Şimdiden bol şans ve sakın unutma staj ne başlangıç ne son çok çalışmak lazım.
             `;
-            await octokit.rest.issues.createComment({
+            await github.rest.issues.createComment({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 issue_number: issue_number,
