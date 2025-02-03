@@ -10,7 +10,8 @@
     "database",
     "embedded",
     "cyber-security",
-    "blockchain"
+    "blockchain",
+    "hardware"
   ],
   "internLocation": ["uzaktan", "yüzyüze"],
   "internType": ["gönüllü", "zorunlu"],
