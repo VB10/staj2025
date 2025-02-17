@@ -1,6 +1,7 @@
 import requests
 import json
 import os
+from datetime import datetime
 
 # GitHub API ayarları
 github_repo = "VB10/staj2025"
@@ -18,7 +19,7 @@ except ImportError:
     exit()
 
 # LinkedIn paylaşım linki (statik olarak tanımlanıyor)
-linkedin_post_url = "https://www.linkedin.com/posts/example-post"
+linkedin_post_url = "https://www.linkedin.com/posts/veli-bacik-345978a9_staj2025-activity-7297232816805679104-7zzq?utm_source=share&utm_medium=member_desktop&rcm=ACoAABcaKuUBuJwj2vB7GRk2JRtQ1navi1AEMwU"
 
 # En son seçilenlerin bulunduğu dosyanın yolu
 current_date = datetime.now().strftime("%d%b").lower()
