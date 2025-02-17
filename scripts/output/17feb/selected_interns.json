@@ -151,41 +151,5 @@
         "intern_type": "zorunlu",
         "category": "mobile",
         "page": 1
-    },
-    {
-        "name": "BARIŞ-Aslan",
-        "issue_url": "https://github.com/VB10/staj2025/issues/26",
-        "duration": "4-hafta,6-hafta",
-        "location": "uzaktan, yüzyüze",
-        "intern_type": "zorunlu",
-        "category": "mobile, backend, frontend, data-science, embedded, cyber-security, blockchain",
-        "page": 1
-    },
-    {
-        "name": "Sefa Bazan",
-        "issue_url": "https://github.com/VB10/staj2025/issues/29",
-        "duration": "4-hafta",
-        "location": "yüzyüze",
-        "intern_type": "zorunlu",
-        "category": "backend,data-science,embedded,database",
-        "page": 1
-    },
-    {
-        "name": "Enes Ödev",
-        "issue_url": "https://github.com/VB10/staj2025/issues/30",
-        "duration": "4-hafta",
-        "location": "yüzyüze",
-        "intern_type": "zorunlu",
-        "category": "mobile,backend,data-science",
-        "page": 1
-    },
-    {
-        "name": "Baran Yavuz",
-        "issue_url": "https://github.com/VB10/staj2025/issues/33",
-        "duration": "4-hafta",
-        "location": "yüzyüze",
-        "intern_type": "zorunlu",
-        "category": "data-science",
-        "page": 1
     }
 ]

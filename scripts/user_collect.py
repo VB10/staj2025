@@ -13,14 +13,14 @@ response = requests.get(github_api_url, headers=github_headers)
 issues = response.json()
 
 # Pagination ayarları (25'li gruplar halinde çekildiğini varsayıyoruz)
-issues_per_page = 25
+issues_per_page = 20
 
 # Önceki last_selected dosyasından en son seçilen kişiyi ve sayfa bilgisini al
 current_date = datetime.now().strftime("%d%b").lower()
 output_dir = f"output/{current_date}"
 os.makedirs(output_dir, exist_ok=True)
 
-last_selected_file = f"{output_dir}/last_selected.json"
+last_selected_file = "output/last_selected.json"
 if os.path.exists(last_selected_file) and os.path.getsize(last_selected_file) > 0:
     with open(last_selected_file, "r", encoding="utf-8") as f:
         try:
@@ -34,7 +34,7 @@ else:
     last_selected = {}
     start_index = 0
 
-# İlk 25 kişiyi seçme
+# İlk 20 kişiyi seçme
 selected_issues = issues[start_index:start_index + issues_per_page]
 
 # Seçilen kişileri kaydetme
@@ -84,8 +84,9 @@ for index, issue in enumerate(selected_issues):
     
     # Mesajı oluşturma (her alanı kutu içine alma, ancak kısaltılmış formatta)
     formatted_message = (
-        f"- {name} [📅 {duration}] [💻 {category}] [📍 {location}] [⚡ {intern_type}] "
+        f"- {name} [📅 {duration}] [💻 {category}] [📍 {location}] [⚡ {intern_type}] | [Başvuru]({issue_url})"
     )
+    
     message_lines.append(formatted_message)
     
     data_to_save.append({
@@ -105,7 +106,7 @@ last_selected = data_to_save[-1] if data_to_save else {}
 with open(f"{output_dir}/selected_interns.json", "w", encoding="utf-8") as f:
     json.dump(data_to_save, f, ensure_ascii=False, indent=4)
 
-with open(f"{output_dir}/last_selected.json", "w", encoding="utf-8") as f:
+with open(last_selected_file, "w", encoding="utf-8") as f:
     json.dump(last_selected, f, ensure_ascii=False, indent=4)
 
 with open(f"{output_dir}/intern_message.txt", "w", encoding="utf-8") as f:
