@@ -4,16 +4,15 @@
 💡 Onlara bir şans verin, birlikte harika işler başarabilirsiniz.
 
 🔗 İşte bu haftanın adayları:
+- Eren Ahmet Yeşiltaş [📅 6-hafta] [💻 backend] [📍 yüzyüze] [⚡ zorunlu] | [Başvuru](https://github.com/VB10/staj2025/issues/39)
+- Medya Doran [📅 4-hafta, 6-hafta] [💻 cyber-security] [📍 uzaktan] [⚡ gönüllü] | [Başvuru](https://github.com/VB10/staj2025/issues/45)
+- YASEMİN TORUN [📅 4-hafta, 6-hafta] [💻 data-science, database] [📍 yüzyüze] [⚡ zorunlu] | [Başvuru](https://github.com/VB10/staj2025/issues/42)
 - BARIŞ-Aslan [📅 4-hafta,6-hafta] [💻 mobile, backend, frontend, data-science, embedded, cyber-security, blockchain] [📍 uzaktan, yüzyüze] [⚡ zorunlu] | [Başvuru](https://github.com/VB10/staj2025/issues/26)
 - Sefa Bazan [📅 4-hafta] [💻 backend,data-science,embedded,database] [📍 yüzyüze] [⚡ zorunlu] | [Başvuru](https://github.com/VB10/staj2025/issues/29)
 - Enes Ödev [📅 4-hafta] [💻 mobile,backend,data-science] [📍 yüzyüze] [⚡ zorunlu] | [Başvuru](https://github.com/VB10/staj2025/issues/30)
-- Baran Yavuz [📅 4-hafta] [💻 data-science] [📍 yüzyüze] [⚡ zorunlu] | [Başvuru](https://github.com/VB10/staj2025/issues/33)
 - Metehan DOĞAN [📅 4-hafta,6-hafta] [💻 mobile,embedded,frontend] [📍 yüzyüze] [⚡ zorunlu] | [Başvuru](https://github.com/VB10/staj2025/issues/34)
 - Zeynep Dila Başaslan [📅 6-hafta] [💻 data-science] [📍 yüzyüze] [⚡ zorunlu] | [Başvuru](https://github.com/VB10/staj2025/issues/38)
-- Eren Ahmet Yeşiltaş [📅 6-hafta] [💻 backend] [📍 yüzyüze] [⚡ zorunlu] | [Başvuru](https://github.com/VB10/staj2025/issues/39)
-- YASEMİN TORUN [📅 4-hafta, 6-hafta] [💻 data-science, database] [📍 yüzyüze] [⚡ zorunlu] | [Başvuru](https://github.com/VB10/staj2025/issues/42)
 - BAYRAM-BARTU-KURNAZ [📅 6-hafta] [💻 backend] [📍 yüzyüze] [⚡ zorunlu] | [Başvuru](https://github.com/VB10/staj2025/issues/43)
-- Gafur APİL [📅 6-hafta] [💻 backend, frontend, pm, qa, blockchain] [📍 uzaktan, yüzyüze] [⚡ zorunlu] | [Başvuru](https://github.com/VB10/staj2025/issues/44)
-- Medya Doran [📅 4-hafta, 6-hafta] [💻 cyber-security] [📍 uzaktan] [⚡ gönüllü] | [Başvuru](https://github.com/VB10/staj2025/issues/45)
 - Mustafa Emirhan-Kartal [📅 4-hafta] [💻 mobile,backend,frontend] [📍 yüzyüze,uzaktan] [⚡ zorunlu] | [Başvuru](https://github.com/VB10/staj2025/issues/48)
 - Eyüp Deli [📅 4-hafta, 6-hafta] [💻 cyber-security, backend] [📍 uzaktan, yüzyüze] [⚡ gönüllü] | [Başvuru](https://github.com/VB10/staj2025/issues/49)
+- Gafur APİL [📅 6-hafta] [💻 backend, frontend, pm, qa, blockchain] [📍 uzaktan, yüzyüze] [⚡ zorunlu] | [Başvuru](https://github.com/VB10/staj2025/issues/44)

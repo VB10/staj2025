@@ -36,7 +36,7 @@ else:
     last_folder = None
 
 # Calculate page and offset
-per_page = 15
+per_page = 30
 page_number = totalCount // per_page + 1
 offset = totalCount % per_page
 

@@ -19,16 +19,16 @@ except ImportError:
     exit()
 
 # LinkedIn paylaşım linki (statik olarak tanımlanıyor)
-linkedin_post_url = "https://www.linkedin.com/posts/veli-bacik-345978a9_staj2025-activity-7297232816805679104-7zzq?utm_source=share&utm_medium=member_desktop&rcm=ACoAABcaKuUBuJwj2vB7GRk2JRtQ1navi1AEMwU"
+linkedin_post_url = "https://www.linkedin.com/posts/veli-bacik-345978a9_staj-2025-hafta-2-ekibinize-kat%C4%B1lmaya-activity-7299778588675903488-sojp?utm_source=share&utm_medium=member_desktop&rcm=ACoAABcaKuUBuJwj2vB7GRk2JRtQ1navi1AEMwU"
 
 # En son seçilenlerin bulunduğu dosyanın yolu
 current_date = datetime.now().strftime("%d%b").lower()
-output_dir = f"output/{current_date}"
+output_dir = f"scripts/output/{current_date}"
 selected_issues_file = f"{output_dir}/selected_interns.json"
 
 # Dosya varsa yükle
 if not os.path.exists(selected_issues_file):
-    print("Seçilen başvurular dosyası bulunamadı!")
+    print(f"Seçilen başvurular dosyası bulunamadı! {selected_issues_file}")
     exit()
 
 with open(selected_issues_file, "r", encoding="utf-8") as f:
