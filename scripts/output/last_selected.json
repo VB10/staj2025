@@ -1,9 +1,12 @@
 {
-    "name": "Samet Kaya",
-    "issue_url": "https://github.com/VB10/staj2025/issues/25",
-    "duration": "4-hafta",
-    "location": "yüzyüze",
-    "intern_type": "zorunlu",
-    "category": "mobile",
-    "page": 1
+    "id": 2828394136,
+    "name": "Eyüp Deli [cyber-security, backend][uzaktan, yüzyüze][gönüllü][4-hafta, 6-hafta]",
+    "issue_url": "https://github.com/VB10/staj2025/issues/49",
+    "duration": "4-hafta, 6-hafta",
+    "location": "uzaktan, yüzyüze",
+    "intern_type": "gönüllü",
+    "category": "cyber-security, backend",
+    "page": 3,
+    "folderName": "24feb",
+    "totalCount": 35
 }
