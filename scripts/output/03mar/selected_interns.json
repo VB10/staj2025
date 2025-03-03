@@ -1,0 +1,137 @@
+[
+    {
+        "id": 2828430822,
+        "name": "Zeynep ZIVALI",
+        "issue_url": "https://github.com/VB10/staj2025/issues/50",
+        "duration": "4-hafta",
+        "location": "uzaktan,yüzyüze",
+        "intern_type": "zorunlu",
+        "category": "frontend,backend,data-science"
+    },
+    {
+        "id": 2828464994,
+        "name": "MURAT-BİLGİN",
+        "issue_url": "https://github.com/VB10/staj2025/issues/53",
+        "duration": "4-hafta",
+        "location": "yüzyüze",
+        "intern_type": "zorunlu",
+        "category": "backend"
+    },
+    {
+        "id": 2828532259,
+        "name": "Ömer İmamoğlu",
+        "issue_url": "https://github.com/VB10/staj2025/issues/54",
+        "duration": "6-hafta",
+        "location": "uzaktan",
+        "intern_type": "zorunlu",
+        "category": "mobile"
+    },
+    {
+        "id": 2828545885,
+        "name": "Onur Tezel",
+        "issue_url": "https://github.com/VB10/staj2025/issues/55",
+        "duration": "4-hafta,6-hafta",
+        "location": "uzaktan,yüzyüze",
+        "intern_type": "gönüllü",
+        "category": "data-science,backend"
+    },
+    {
+        "id": 2828572825,
+        "name": "YAKUP ZENGİN",
+        "issue_url": "https://github.com/VB10/staj2025/issues/56",
+        "duration": "4-hafta,6-hafta",
+        "location": "uzaktan,yüzyüze",
+        "intern_type": "zorunlu",
+        "category": "data-science,database,backend"
+    },
+    {
+        "id": 2828650783,
+        "name": "Fatih Reha Dişçi",
+        "issue_url": "https://github.com/VB10/staj2025/issues/58",
+        "duration": "6-hafta",
+        "location": "yüzyüze",
+        "intern_type": "gönüllü",
+        "category": "backend,database"
+    },
+    {
+        "id": 2829298475,
+        "name": "ZAFER-AVCI",
+        "issue_url": "https://github.com/VB10/staj2025/issues/61",
+        "duration": "4-hafta",
+        "location": "uzaktan,yüzyüze",
+        "intern_type": "zorunlu",
+        "category": "backend,database,data-science"
+    },
+    {
+        "id": 2829338249,
+        "name": "Veli Bahadır Can",
+        "issue_url": "https://github.com/VB10/staj2025/issues/62",
+        "duration": "4-hafta",
+        "location": "yüzyüze,uzaktan",
+        "intern_type": "zorunlu",
+        "category": "data-science,backend,database"
+    },
+    {
+        "id": 2829395600,
+        "name": "Ezgi COBAN",
+        "issue_url": "https://github.com/VB10/staj2025/issues/63",
+        "duration": "4-hafta,6-hafta",
+        "location": "uzaktan,yüzyüze",
+        "intern_type": "zorunlu",
+        "category": "backend,data-science"
+    },
+    {
+        "id": 2829405159,
+        "name": "Begüm Arıcı",
+        "issue_url": "https://github.com/VB10/staj2025/issues/64",
+        "duration": "4-hafta,6-hafta",
+        "location": "yüzyüze",
+        "intern_type": "zorunlu",
+        "category": "mobile,data-science,frontend"
+    },
+    {
+        "id": 2829453435,
+        "name": "Yusuf Can Mercan",
+        "issue_url": "https://github.com/VB10/staj2025/issues/65",
+        "duration": "4-hafta,6-hafta",
+        "location": "yüzyüze",
+        "intern_type": "zorunlu",
+        "category": "mobile"
+    },
+    {
+        "id": 2829471976,
+        "name": "Emirkan Hoş",
+        "issue_url": "https://github.com/VB10/staj2025/issues/66",
+        "duration": "4-hafta,6-hafta",
+        "location": "yüzyüze",
+        "intern_type": "gönüllü",
+        "category": "backend"
+    },
+    {
+        "id": 2829489041,
+        "name": "Fırat Özcan",
+        "issue_url": "https://github.com/VB10/staj2025/issues/67",
+        "duration": "4-hafta",
+        "location": "yüzyüze",
+        "intern_type": "zorunlu",
+        "category": "data-science,database"
+    },
+    {
+        "id": 2829566153,
+        "name": "Ümitcan ZANBAK",
+        "issue_url": "https://github.com/VB10/staj2025/issues/68",
+        "duration": "4-hafta,6-hafta",
+        "location": "yüzyüze",
+        "intern_type": "zorunlu",
+        "category": "frontend,backend,data-science"
+    },
+    {
+        "id": 2829663650,
+        "name": "Enes-Kuruoğlu",
+        "issue_url": "https://github.com/VB10/staj2025/issues/69",
+        "duration": "4-hafta",
+        "location": "uzaktan,yüzyüze",
+        "intern_type": "zorunlu",
+        "category": "data-science,backend,mobile,cyber-security"
+    }
+]
