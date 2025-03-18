@@ -2,7 +2,7 @@ import json
 import os
 
 # Seçilen başvuruların dosya yolu
-selected_interns_file = "output/17feb/selected_interns.json"
+selected_interns_file = "output/03mar/selected_interns.json"
 
 # Dosya kontrolü
 if not os.path.exists(selected_interns_file):

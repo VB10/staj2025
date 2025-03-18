@@ -158,12 +158,21 @@ unique_names = set()
 # Issue başlığını parse etme için regex deseni - updated to handle multiple durations and spaces
 pattern = re.compile(r"^(.*?)\s*\[(.*?)\]\[(.*?)\]\[(.*?)\]\[(.*?)\]$")
 
-# LinkedIn gönderisi için giriş metni
+# Calculate week number based on output folders
+output_base_dir = "scripts/output"
+existing_folders = [f for f in os.listdir(output_base_dir) if os.path.isdir(os.path.join(output_base_dir, f))]
+week_number = len(existing_folders) + 1
+
+# Updated LinkedIn intro message in Turkish with week number
 linkedin_intro = (
-    "📢 **Staj 2025 Reposunda ekibinizde çalışmaya hazır, kariyerine yön vermek isteyen yetenekli stajyerler burada!** 📢\n\n"
-    "🎯 Sigortaları okulları tarafından karşılanıyor, hedefleri büyük!\n"
-    "💡 Onlara bir şans verin, birlikte harika işler başarabilirsiniz.\n\n"
-    "🔗 İşte bu haftanın adayları:"
+    f"📢 **Staj 2025 - {week_number}. Hafta Değerlendirmesi** 📢\n\n"
+    "🎯 Ekibinize yeni yetenekler katmak ister misiniz?\n"
+    "💫 Bu hafta da birbirinden yetenekli stajyer adaylarımızı sizlerle buluşturuyoruz!\n\n"
+    "✨ Öne Çıkan Özellikler:\n"
+    "• Sigorta ve yasal yükümlülükler okul tarafından karşılanıyor\n"
+    "• Hem uzaktan hem yüzyüze çalışma imkanı\n"
+    "• Esnek staj süreleri\n\n"
+    "👥 İşte bu haftanın parlayan adayları:"
 )
 
 message_lines.append(linkedin_intro)
