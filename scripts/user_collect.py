@@ -47,7 +47,7 @@ selected_issues = []
 max_retries = 3  # Maximum number of retries for failed requests
 retry_count = 0
 
-while len(selected_issues) < 15 and retry_count < max_retries:
+while len(selected_issues) < 50 and retry_count < max_retries:
     try:
         response = requests.get(
             github_api_url,
@@ -73,7 +73,7 @@ while len(selected_issues) < 15 and retry_count < max_retries:
         print(f"Page {page_number}: Found {len(issues)} issues")
         
         # Calculate how many issues we need from this page
-        remaining_needed = 15 - len(selected_issues)
+        remaining_needed = 50 - len(selected_issues)
         
         # Handle the first page differently
         if page_number == (totalCount // per_page + 1):
@@ -87,7 +87,7 @@ while len(selected_issues) < 15 and retry_count < max_retries:
         
         print(f"Current total selected: {len(selected_issues)}")
         
-        if len(selected_issues) >= 15:
+        if len(selected_issues) >= 50:
             break
             
         page_number += 1
@@ -97,10 +97,10 @@ while len(selected_issues) < 15 and retry_count < max_retries:
         retry_count += 1
         continue
 
-# If we still don't have 15 issues, try to get more from subsequent pages
-if len(selected_issues) < 15:
+# If we still don't have 50 issues, try to get more from subsequent pages
+if len(selected_issues) < 50:
     print(f"Warning: Only found {len(selected_issues)} issues. Trying to get more...")
-    while len(selected_issues) < 15 and retry_count < max_retries:
+    while len(selected_issues) < 50 and retry_count < max_retries:
         try:
             response = requests.get(
                 github_api_url,
@@ -120,7 +120,7 @@ if len(selected_issues) < 15:
             if not issues:
                 break
                 
-            remaining = 15 - len(selected_issues)
+            remaining = 50 - len(selected_issues)
             selected_issues.extend(issues[:remaining])
             print(f"Added {remaining} more issues from page {page_number}")
             page_number += 1
@@ -131,8 +131,8 @@ if len(selected_issues) < 15:
 
 print(f"Final total issues selected: {len(selected_issues)}")
 
-if len(selected_issues) != 15:
-    print(f"WARNING: Could not get exactly 15 issues. Only found {len(selected_issues)} issues.")
+if len(selected_issues) != 50:
+    print(f"WARNING: Could not get exactly 50 issues. Only found {len(selected_issues)} issues.")
     print("Please check if there are enough open issues in the repository.")
 
 # Print selected users before processing
@@ -234,7 +234,7 @@ for index, issue in enumerate(selected_issues):
     
     # Format message for LinkedIn
     formatted_message = (
-        f"- {name} [📅 {duration}] [💻 {category}] [📍 {location}] [⚡ {intern_type}] | [Başvuru]({issue_url})"
+        f"- {name} [💻 {category}]"
     )
     message_lines.append(formatted_message)
 

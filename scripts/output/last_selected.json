@@ -1,12 +1,12 @@
 {
-    "id": 2829663650,
-    "name": "Enes-Kuruoğlu",
-    "issue_url": "https://github.com/VB10/staj2025/issues/69",
+    "id": 2835808331,
+    "name": "Muhammet Furkan Çam",
+    "issue_url": "https://github.com/VB10/staj2025/issues/134",
     "duration": "4-hafta",
-    "location": "uzaktan,yüzyüze",
+    "location": "yüzyüze,uzaktan",
     "intern_type": "zorunlu",
-    "category": "data-science,backend,mobile,cyber-security",
-    "page": 1,
-    "folderName": "03mar",
-    "totalCount": 49
+    "category": "frontend,backend,cyber-security,data-science,database",
+    "page": 3,
+    "folderName": "18mar",
+    "totalCount": 99
 }
