@@ -11,7 +11,9 @@
     "embedded",
     "cyber-security",
     "blockchain",
-    "hardware"
+    "hardware",
+    "SAP",
+    "ABAP"
   ],
   "internLocation": ["uzaktan", "yüzyüze"],
   "internType": ["gönüllü", "zorunlu"],
