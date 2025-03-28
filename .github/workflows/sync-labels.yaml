@@ -11,6 +11,10 @@ on:
     
   workflow_dispatch:
 
+permissions:
+  issues: write
+  contents: read
+     
 jobs:
   sync-labels:
     runs-on: ubuntu-latest

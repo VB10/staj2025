@@ -4,6 +4,10 @@ on:
   issues:
     types: [opened, edited]
 
+permissions:
+  issues: write
+  contents: read
+
 jobs:
   add-labels:
     runs-on: ubuntu-latest
@@ -66,27 +70,56 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const issueNumber = context.issue.number;
-            // Uygun format mesajı
+            const issueTitle = context.payload.issue.title;
+            const labels = ${{ steps.labels.outputs.result }};
+            const labelGroups = issueTitle.match(/\[([^\]]+)\]/g);
+            
+            let errorReason = '';
+            if (!labelGroups) {
+              errorReason = 'Başlıkta hiç köşeli parantez ([]) bulunamadı.';
+            } else if (labelGroups.length !== Object.keys(labels).length) {
+              errorReason = `Başlıkta ${Object.keys(labels).length} adet etiket grubu olmalı, fakat ${labelGroups.length} adet bulundu.`;
+            } else {
+              const invalidTags = [];
+              labelGroups.forEach((group, index) => {
+                const tags = group.match(/[^,\[\]]+/g).map(tag => tag.trim());
+                const field = Object.keys(labels)[index];
+                const validLabels = labels[field];
+                const invalidTagsInGroup = tags.filter(tag => !validLabels.includes(tag));
+                if (invalidTagsInGroup.length > 0) {
+                  invalidTags.push(`"${invalidTagsInGroup.join(', ')}" etiketleri "${field}" alanı için geçerli değil. Geçerli etiketler: ${validLabels.join(', ')}`);
+                }
+              });
+              if (invalidTags.length > 0) {
+                errorReason = 'Geçersiz etiketler bulundu:\n' + invalidTags.join('\n');
+              }
+            }
+
             const comment = `
               Merhaba @${context.actor}, bu issue'nun başlığı belirlenen formata uymuyor.
+
+              Hata Nedeni:
+              ${errorReason}
+
               Lütfen başlığı "AD-SOYAD [ALAN][STAJ YERİ][STAJ TİPİ][STAJ SÜRESİ]" formatına uygun hale getirin.
+              
               Örnekler için:
-              https://github.com/VB10/staj_2024/issues/1
-              Bu işlemi tamamladıktan sonra issue'yu başlığını güncellemen yeterli olacak.
+              https://github.com/VB10/staj2025#-%C3%B6rnek-ba%C5%9Fvuru-ba%C5%9Fl%C4%B1klar%C4%B1
+              
+              Bu işlemi tamamladıktan sonra issue başlığını güncellemeniz yeterli olacak.
             `;
-            // Issue'ya yorum ekle
-            github.issues.createComment({
+            
+            await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              issue_number: issueNumber,
+              issue_number: context.issue.number,
               body: comment
             });
-            // Issue'yu kapat
-            github.issues.update({
+            
+            await github.rest.issues.update({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              issue_number: issueNumber,
+              issue_number: context.issue.number,
               state: 'closed'
             });
 
@@ -125,7 +158,7 @@ jobs:
             const wasClosed = issueState === 'closed';
 
             if (wasClosed) {
-              await github.issues.update({
+              await github.rest.issues.update({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 issue_number: issue_number,
@@ -134,7 +167,7 @@ jobs:
             }
 
             if (labelsToAdd.size > 0) {
-              await github.issues.addLabels({
+              await github.rest.issues.addLabels({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 issue_number: issue_number,
@@ -142,7 +175,7 @@ jobs:
               });
             }
 
-            await github.issues.addAssignees({
+            await github.rest.issues.addAssignees({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 issue_number: issue_number,
@@ -154,7 +187,7 @@ jobs:
               Lütfen staj bulduktan sonra buraya gelip kapatmayı unutma.
               Şimdiden bol şans ve sakın unutma staj ne başlangıç ne son çok çalışmak lazım.
             `;
-            await github.issues.createComment({
+            await github.rest.issues.createComment({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 issue_number: issue_number,
