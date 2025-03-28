@@ -14,7 +14,8 @@
     "blockchain",
     "system",
     "networking",
-    "hardware"
+    "hardware",
+    "sap-abap",
   ],
   "internLocation": ["uzaktan", "yüzyüze"],
   "internType": ["gönüllü", "zorunlu"],
