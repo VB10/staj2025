@@ -11,9 +11,11 @@
     "embedded",
     "cyber-security",
     "blockchain",
+    "system",
+    "networking",
     "hardware"
   ],
   "internLocation": ["uzaktan", "yüzyüze"],
   "internType": ["gönüllü", "zorunlu"],
-  "internDuration": ["4-hafta", "6-hafta"]
+  "internDuration": ["4-hafta", "6-hafta", "8-hafta"]
 }
