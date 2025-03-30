@@ -7,13 +7,17 @@
     "qa",
     "game",
     "data-science",
+    "data-analyst",
     "database",
     "embedded",
     "cyber-security",
     "blockchain",
-    "hardware"
+    "system",
+    "networking",
+    "hardware",
+    "sap-abap"
   ],
   "internLocation": ["uzaktan", "yüzyüze"],
   "internType": ["gönüllü", "zorunlu"],
-  "internDuration": ["4-hafta", "6-hafta"]
+  "internDuration": ["4-hafta", "6-hafta", "8-hafta"]
 }
