@@ -1,0 +1,26 @@
+📢 **Staj 2025 - 4. Hafta Değerlendirmesi** 📢
+
+🎯 Ekibinize yeni yetenekler katmak ister misiniz?
+💫 Bu hafta da birbirinden yetenekli stajyer adaylarımızı sizlerle buluşturuyoruz!
+
+✨ Öne Çıkan Özellikler:
+• Sigorta ve yasal yükümlülükler okul tarafından karşılanıyor
+• Hem uzaktan hem yüzyüze çalışma imkanı
+• Esnek staj süreleri
+
+👥 İşte bu haftanın parlayan adayları:
+- Zeynep ZIVALI [📅 4-hafta] [💻 frontend,backend,data-science] [📍 uzaktan,yüzyüze] [⚡ zorunlu] | [Başvuru](https://github.com/VB10/staj2025/issues/50)
+- MURAT-BİLGİN [📅 4-hafta] [💻 backend] [📍 yüzyüze] [⚡ zorunlu] | [Başvuru](https://github.com/VB10/staj2025/issues/53)
+- Ömer İmamoğlu [📅 6-hafta] [💻 mobile] [📍 uzaktan] [⚡ zorunlu] | [Başvuru](https://github.com/VB10/staj2025/issues/54)
+- Onur Tezel [📅 4-hafta,6-hafta] [💻 data-science,backend] [📍 uzaktan,yüzyüze] [⚡ gönüllü] | [Başvuru](https://github.com/VB10/staj2025/issues/55)
+- YAKUP ZENGİN [📅 4-hafta,6-hafta] [💻 data-science,database,backend] [📍 uzaktan,yüzyüze] [⚡ zorunlu] | [Başvuru](https://github.com/VB10/staj2025/issues/56)
+- Fatih Reha Dişçi [📅 6-hafta] [💻 backend,database] [📍 yüzyüze] [⚡ gönüllü] | [Başvuru](https://github.com/VB10/staj2025/issues/58)
+- ZAFER-AVCI [📅 4-hafta] [💻 backend,database,data-science] [📍 uzaktan,yüzyüze] [⚡ zorunlu] | [Başvuru](https://github.com/VB10/staj2025/issues/61)
+- Veli Bahadır Can [📅 4-hafta] [💻 data-science,backend,database] [📍 yüzyüze,uzaktan] [⚡ zorunlu] | [Başvuru](https://github.com/VB10/staj2025/issues/62)
+- Ezgi COBAN [📅 4-hafta,6-hafta] [💻 backend,data-science] [📍 uzaktan,yüzyüze] [⚡ zorunlu] | [Başvuru](https://github.com/VB10/staj2025/issues/63)
+- Begüm Arıcı [📅 4-hafta,6-hafta] [💻 mobile,data-science,frontend] [📍 yüzyüze] [⚡ zorunlu] | [Başvuru](https://github.com/VB10/staj2025/issues/64)
+- Yusuf Can Mercan [📅 4-hafta,6-hafta] [💻 mobile] [📍 yüzyüze] [⚡ zorunlu] | [Başvuru](https://github.com/VB10/staj2025/issues/65)
+- Emirkan Hoş [📅 4-hafta,6-hafta] [💻 backend] [📍 yüzyüze] [⚡ gönüllü] | [Başvuru](https://github.com/VB10/staj2025/issues/66)
+- Fırat Özcan [📅 4-hafta] [💻 data-science,database] [📍 yüzyüze] [⚡ zorunlu] | [Başvuru](https://github.com/VB10/staj2025/issues/67)
+- Ümitcan ZANBAK [📅 4-hafta,6-hafta] [💻 frontend,backend,data-science] [📍 yüzyüze] [⚡ zorunlu] | [Başvuru](https://github.com/VB10/staj2025/issues/68)
+- Enes-Kuruoğlu [📅 4-hafta] [💻 data-science,backend,mobile,cyber-security] [📍 uzaktan,yüzyüze] [⚡ zorunlu] | [Başvuru](https://github.com/VB10/staj2025/issues/69)
