@@ -9,6 +9,7 @@
 • Esnek staj süreleri
 
 👥 İşte bu haftanın parlayan adayları:
+- Kübra Sade [💻 backend]
 - Melik Savaş [💻 game]
 - ÇAĞLA-KORKMAZ [💻 backend,data-science,frontend]
 - MEHMET-FIŞKINDAL [💻 mobile]
