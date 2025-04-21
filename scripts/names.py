@@ -1,8 +1,9 @@
 import json
 import os
-
+from datetime import datetime
+current_date = datetime.now().strftime("%d%b").lower()
 # Seçilen başvuruların dosya yolu
-selected_interns_file = "scripts/output/30mar/selected_interns.json"
+selected_interns_file = f"scripts/output/{current_date}/selected_interns.json"
 
 # Dosya kontrolü
 if not os.path.exists(selected_interns_file):

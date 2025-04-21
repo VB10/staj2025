@@ -1,0 +1,461 @@
+[
+    {
+        "id": 2857679496,
+        "name": "Kübra-Sade",
+        "issue_url": "https://github.com/VB10/staj2025/issues/205",
+        "duration": "4-hafta,6-hafta",
+        "location": "yüzyüze,uzaktan",
+        "intern_type": "zorunlu",
+        "category": "backend"
+    },
+    {
+        "id": 2857679496,
+        "name": "Melik Savaş",
+        "issue_url": "https://github.com/VB10/staj2025/issues/207",
+        "duration": "4-hafta,6-hafta",
+        "location": "yüzyüze,uzaktan",
+        "intern_type": "zorunlu",
+        "category": "game"
+    },
+    {
+        "id": 2857841095,
+        "name": "ÇAĞLA-KORKMAZ",
+        "issue_url": "https://github.com/VB10/staj2025/issues/208",
+        "duration": "4-hafta,6-hafta",
+        "location": "uzaktan,yüzyüze",
+        "intern_type": "gönüllü",
+        "category": "backend,data-science,frontend"
+    },
+    {
+        "id": 2857923473,
+        "name": "MEHMET-FIŞKINDAL",
+        "issue_url": "https://github.com/VB10/staj2025/issues/209",
+        "duration": "6-hafta",
+        "location": "yüzyüze",
+        "intern_type": "gönüllü",
+        "category": "mobile"
+    },
+    {
+        "id": 2857935674,
+        "name": "SEVAL SORAK",
+        "issue_url": "https://github.com/VB10/staj2025/issues/210",
+        "duration": "6-hafta",
+        "location": "uzaktan,yüzyüze",
+        "intern_type": "zorunlu",
+        "category": "data-science"
+    },
+    {
+        "id": 2858291309,
+        "name": "KHADIJA-FAKSH",
+        "issue_url": "https://github.com/VB10/staj2025/issues/211",
+        "duration": "4-hafta,6-hafta",
+        "location": "yüzyüze,uzaktan",
+        "intern_type": "zorunlu",
+        "category": "mobile,backend,frontend,game,data-science,database"
+    },
+    {
+        "id": 2858326428,
+        "name": "Omer Faruk Polat",
+        "issue_url": "https://github.com/VB10/staj2025/issues/212",
+        "duration": "4-hafta",
+        "location": "uzaktan,yüzyüze",
+        "intern_type": "zorunlu",
+        "category": "mobile,backend"
+    },
+    {
+        "id": 2858469536,
+        "name": "Büşra Sevinç",
+        "issue_url": "https://github.com/VB10/staj2025/issues/214",
+        "duration": "4-hafta",
+        "location": "yüzyüze",
+        "intern_type": "zorunlu",
+        "category": "backend"
+    },
+    {
+        "id": 2858680351,
+        "name": "Emircan Kartal",
+        "issue_url": "https://github.com/VB10/staj2025/issues/215",
+        "duration": "4-hafta,6-hafta",
+        "location": "uzaktan,yüzyüze",
+        "intern_type": "zorunlu",
+        "category": "frontend,mobile,data-science"
+    },
+    {
+        "id": 2858953954,
+        "name": "YUSUF ÖZDEN",
+        "issue_url": "https://github.com/VB10/staj2025/issues/216",
+        "duration": "4-hafta,6-hafta",
+        "location": "uzaktan,yüzyüze",
+        "intern_type": "zorunlu",
+        "category": "data-science,mobile"
+    },
+    {
+        "id": 2860078076,
+        "name": "EMRE SEVİK",
+        "issue_url": "https://github.com/VB10/staj2025/issues/217",
+        "duration": "4-hafta,6-hafta",
+        "location": "yüzyüze",
+        "intern_type": "zorunlu",
+        "category": "data-science,backend,frontend,database"
+    },
+    {
+        "id": 2860675356,
+        "name": "Damla Cakcı",
+        "issue_url": "https://github.com/VB10/staj2025/issues/218",
+        "duration": "4-hafta,6-hafta",
+        "location": "yüzyüze",
+        "intern_type": "zorunlu",
+        "category": "mobile,frontend"
+    },
+    {
+        "id": 2860767333,
+        "name": "SEZER-GÜMÜŞ",
+        "issue_url": "https://github.com/VB10/staj2025/issues/219",
+        "duration": "4-hafta,6-hafta",
+        "location": "yüzyüze",
+        "intern_type": "zorunlu",
+        "category": "frontend,backend,mobile"
+    },
+    {
+        "id": 2861159041,
+        "name": "Mustafa Burak Başar",
+        "issue_url": "https://github.com/VB10/staj2025/issues/220",
+        "duration": "4-hafta",
+        "location": "yüzyüze",
+        "intern_type": "zorunlu",
+        "category": "data-science"
+    },
+    {
+        "id": 2861302916,
+        "name": "YUSUF-ULUŞAHİN",
+        "issue_url": "https://github.com/VB10/staj2025/issues/221",
+        "duration": "4-hafta",
+        "location": "yüzyüze",
+        "intern_type": "zorunlu",
+        "category": "mobile"
+    },
+    {
+        "id": 2862505900,
+        "name": "AHMET ULVİ KORKMAZ",
+        "issue_url": "https://github.com/VB10/staj2025/issues/222",
+        "duration": "4-hafta",
+        "location": "yüzyüze,uzaktan",
+        "intern_type": "zorunlu",
+        "category": "cyber-security"
+    },
+    {
+        "id": 2863051235,
+        "name": "Esra Betül Özcan",
+        "issue_url": "https://github.com/VB10/staj2025/issues/223",
+        "duration": "6-hafta",
+        "location": "yüzyüze,uzaktan",
+        "intern_type": "zorunlu",
+        "category": "mobile,backend,database"
+    },
+    {
+        "id": 2863205750,
+        "name": "Yasin-Güzel",
+        "issue_url": "https://github.com/VB10/staj2025/issues/224",
+        "duration": "6-hafta",
+        "location": "yüzyüze,uzaktan",
+        "intern_type": "zorunlu",
+        "category": "mobile"
+    },
+    {
+        "id": 2863445200,
+        "name": "TUĞÇE-DENİZ",
+        "issue_url": "https://github.com/VB10/staj2025/issues/225",
+        "duration": "4-hafta",
+        "location": "uzaktan,yüzyüze",
+        "intern_type": "zorunlu",
+        "category": "backend,frontend,data-science,database"
+    },
+    {
+        "id": 2863721563,
+        "name": "Tarık TAŞKIN",
+        "issue_url": "https://github.com/VB10/staj2025/issues/226",
+        "duration": "6-hafta",
+        "location": "uzaktan,yüzyüze",
+        "intern_type": "zorunlu, gönüllü",
+        "category": "embedded,data-science,database,backend,mobile"
+    },
+    {
+        "id": 2864203297,
+        "name": "Aslı-İZCİ",
+        "issue_url": "https://github.com/VB10/staj2025/issues/227",
+        "duration": "4-hafta",
+        "location": "uzaktan,yüzyüze",
+        "intern_type": "zorunlu",
+        "category": "mobile,backend,frontend,data-science,embedded"
+    },
+    {
+        "id": 2864407529,
+        "name": "SERHAT ER",
+        "issue_url": "https://github.com/VB10/staj2025/issues/228",
+        "duration": "4-hafta,6-hafta",
+        "location": "uzaktan,yüzyüze",
+        "intern_type": "zorunlu",
+        "category": "mobile,backend,data-science,database,embedded"
+    },
+    {
+        "id": 2865556114,
+        "name": "Sevinç Koçak",
+        "issue_url": "https://github.com/VB10/staj2025/issues/229",
+        "duration": "4-hafta",
+        "location": "uzaktan,yüzyüze",
+        "intern_type": "zorunlu",
+        "category": "mobile,database,embedded"
+    },
+    {
+        "id": 2867225311,
+        "name": "MEHMET BESTAMİ BAKIR",
+        "issue_url": "https://github.com/VB10/staj2025/issues/230",
+        "duration": "4-hafta",
+        "location": "yüzyüze",
+        "intern_type": "zorunlu",
+        "category": "mobile,backend"
+    },
+    {
+        "id": 2867227186,
+        "name": "GİZEM EMİR",
+        "issue_url": "https://github.com/VB10/staj2025/issues/231",
+        "duration": "4-hafta",
+        "location": "yüzyüze",
+        "intern_type": "zorunlu",
+        "category": "mobile,data-science"
+    },
+    {
+        "id": 2869511745,
+        "name": "Elif Sinem Sert",
+        "issue_url": "https://github.com/VB10/staj2025/issues/232",
+        "duration": "4-hafta,6-hafta",
+        "location": "uzaktan",
+        "intern_type": "zorunlu",
+        "category": "backend,database"
+    },
+    {
+        "id": 2869619115,
+        "name": "Enes-Orhan",
+        "issue_url": "https://github.com/VB10/staj2025/issues/233",
+        "duration": "4-hafta",
+        "location": "uzaktan,yüzyüze",
+        "intern_type": "zorunlu",
+        "category": "mobile"
+    },
+    {
+        "id": 2870723342,
+        "name": "SERAY ALTINTAŞ",
+        "issue_url": "https://github.com/VB10/staj2025/issues/234",
+        "duration": "4-hafta,6-hafta",
+        "location": "uzaktan",
+        "intern_type": "gönüllü",
+        "category": "data-science"
+    },
+    {
+        "id": 2873204055,
+        "name": "Ceyda Güneyatan",
+        "issue_url": "https://github.com/VB10/staj2025/issues/236",
+        "duration": "4-hafta,6-hafta",
+        "location": "yüzyüze",
+        "intern_type": "zorunlu",
+        "category": "data-science,database,backend"
+    },
+    {
+        "id": 2873248692,
+        "name": "EMİRHAN BEKTAŞ",
+        "issue_url": "https://github.com/VB10/staj2025/issues/237",
+        "duration": "4-hafta",
+        "location": "uzaktan,yüzyüze",
+        "intern_type": "zorunlu",
+        "category": "frontend,backend,mobile"
+    },
+    {
+        "id": 2873344095,
+        "name": "Fatma Nisanur Harman",
+        "issue_url": "https://github.com/VB10/staj2025/issues/239",
+        "duration": "4-hafta,6-hafta",
+        "location": "yüzyüze",
+        "intern_type": "zorunlu",
+        "category": "mobile,pm,qa,data-science,database,embedded,cyber-security,blockchain,hardware"
+    },
+    {
+        "id": 2874940220,
+        "name": "Esmanur Eral",
+        "issue_url": "https://github.com/VB10/staj2025/issues/240",
+        "duration": "6-hafta",
+        "location": "uzaktan,yüzyüze",
+        "intern_type": "zorunlu",
+        "category": "mobile,backend,"
+    },
+    {
+        "id": 2875080885,
+        "name": "CEYDANUR DUMAN",
+        "issue_url": "https://github.com/VB10/staj2025/issues/241",
+        "duration": "6-hafta",
+        "location": "uzaktan,yüzyüze",
+        "intern_type": "zorunlu",
+        "category": "backend,data-science"
+    },
+    {
+        "id": 2875138235,
+        "name": "AYKUT ÜNAL",
+        "issue_url": "https://github.com/VB10/staj2025/issues/242",
+        "duration": "4-hafta,6-hafta",
+        "location": "uzaktan",
+        "intern_type": "gönüllü",
+        "category": "mobile,backend,frontend,blockchain"
+    },
+    {
+        "id": 2875188692,
+        "name": "Ahmet Harun ŞİMŞEK",
+        "issue_url": "https://github.com/VB10/staj2025/issues/243",
+        "duration": "4-hafta",
+        "location": "yüzyüze",
+        "intern_type": "zorunlu",
+        "category": "data-science,database"
+    },
+    {
+        "id": 2875519217,
+        "name": "Emre YILDIRIM",
+        "issue_url": "https://github.com/VB10/staj2025/issues/244",
+        "duration": "6-hafta",
+        "location": "uzaktan,yüzyüze",
+        "intern_type": "gönüllü",
+        "category": "data-science,database,backend,frontend,mobile"
+    },
+    {
+        "id": 2876033281,
+        "name": "İbrahim Tuna CÖRT",
+        "issue_url": "https://github.com/VB10/staj2025/issues/247",
+        "duration": "4-hafta",
+        "location": "yüzyüze",
+        "intern_type": "zorunlu",
+        "category": "mobile,backend,data-science,database"
+    },
+    {
+        "id": 2877407201,
+        "name": "Eylem Seyhan",
+        "issue_url": "https://github.com/VB10/staj2025/issues/248",
+        "duration": "6-hafta,4-hafta",
+        "location": "uzaktan,yüzyüze",
+        "intern_type": "gönüllü",
+        "category": "data-science,database,backend,frontend,qa"
+    },
+    {
+        "id": 2878037242,
+        "name": "Metehan BELLİ",
+        "issue_url": "https://github.com/VB10/staj2025/issues/249",
+        "duration": "4-hafta,6-hafta",
+        "location": "uzaktan,yüzyüze",
+        "intern_type": "zorunlu, gönüllü",
+        "category": "mobile,backend,frontend,data-science"
+    },
+    {
+        "id": 2878356412,
+        "name": "MERTCAN EL",
+        "issue_url": "https://github.com/VB10/staj2025/issues/250",
+        "duration": "4-hafta,6-hafta",
+        "location": "uzaktan,yüzyüze",
+        "intern_type": "zorunlu",
+        "category": "data-science,game,database"
+    },
+    {
+        "id": 2878383391,
+        "name": "Arif Kaan Bitgin",
+        "issue_url": "https://github.com/VB10/staj2025/issues/251",
+        "duration": "4-hafta,6-hafta",
+        "location": "yüzyüze,uzaktan",
+        "intern_type": "zorunlu",
+        "category": "backend,blockchain,embedded,cyber-security,frontend,mobile"
+    },
+    {
+        "id": 2878388979,
+        "name": "Talha Antep",
+        "issue_url": "https://github.com/VB10/staj2025/issues/252",
+        "duration": "4-hafta,6-hafta",
+        "location": "uzaktan,yüzyüze",
+        "intern_type": "zorunlu",
+        "category": "mobile,backend,data-science"
+    },
+    {
+        "id": 2878396826,
+        "name": "FATİH-YARDAK",
+        "issue_url": "https://github.com/VB10/staj2025/issues/253",
+        "duration": "4-hafta,6-hafta",
+        "location": "uzaktan,yüzyüze",
+        "intern_type": "gönüllü",
+        "category": "qa,data-science,database"
+    },
+    {
+        "id": 2878429805,
+        "name": "Osman TEKDAMAR",
+        "issue_url": "https://github.com/VB10/staj2025/issues/255",
+        "duration": "6-hafta",
+        "location": "yüzyüze",
+        "intern_type": "zorunlu",
+        "category": "data-science,database,game,backend"
+    },
+    {
+        "id": 2878487459,
+        "name": "Yavuz Murat YILDIRIM",
+        "issue_url": "https://github.com/VB10/staj2025/issues/256",
+        "duration": "4-hafta,6-hafta",
+        "location": "uzaktan,yüzyüze",
+        "intern_type": "gönüllü",
+        "category": "data-science,database,backend"
+    },
+    {
+        "id": 2878510167,
+        "name": "Ahmet Buğra ÖNSÖZ",
+        "issue_url": "https://github.com/VB10/staj2025/issues/257",
+        "duration": "4-hafta",
+        "location": "uzaktan,yüzyüze",
+        "intern_type": "zorunlu",
+        "category": "data-science,database,"
+    },
+    {
+        "id": 2878566897,
+        "name": "ŞEHRİ SENADEMİRBAŞ",
+        "issue_url": "https://github.com/VB10/staj2025/issues/258",
+        "duration": "4-hafta",
+        "location": "uzaktan,yüzyüze",
+        "intern_type": "zorunlu",
+        "category": "backend,data-science,game"
+    },
+    {
+        "id": 2878629507,
+        "name": "MEHMET DOĞUKAN ÖZER",
+        "issue_url": "https://github.com/VB10/staj2025/issues/259",
+        "duration": "4-hafta",
+        "location": "uzaktan,yüzyüze",
+        "intern_type": "zorunlu",
+        "category": "backend,data-science,frontend"
+    },
+    {
+        "id": 2878719347,
+        "name": "Melek Taş",
+        "issue_url": "https://github.com/VB10/staj2025/issues/261",
+        "duration": "6-hafta",
+        "location": "uzaktan",
+        "intern_type": "zorunlu",
+        "category": "mobile"
+    },
+    {
+        "id": 2878867511,
+        "name": "Eren Şahyılmaz",
+        "issue_url": "https://github.com/VB10/staj2025/issues/262",
+        "duration": "6-hafta",
+        "location": "uzaktan,yüzyüze",
+        "intern_type": "zorunlu",
+        "category": "data-science,database"
+    },
+    {
+        "id": 2879026695,
+        "name": "Muhammet Mustafa KARAGÖZ",
+        "issue_url": "https://github.com/VB10/staj2025/issues/269",
+        "duration": "4-hafta,6-hafta",
+        "location": "uzaktan,yüzyüze",
+        "intern_type": "gönüllü",
+        "category": "data-science,backend,database,qa"
+    }
+]
