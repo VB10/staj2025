@@ -57,3 +57,4 @@
 - FURKAN YILMAZ [💻 data-science,backend,frontend,mobile]
 
 Buradan listede olan arkadaşların detaylarına kolayca erişebilirsiniz:
+https://github.com/VB10/staj2025/blob/main/scripts/output/12may/selected_interns.json

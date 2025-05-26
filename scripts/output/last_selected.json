@@ -1,12 +1,12 @@
 {
-    "id": 2897517296,
-    "name": "FURKAN YILMAZ",
-    "issue_url": "https://github.com/VB10/staj2025/issues/337",
+    "id": 2927886323,
+    "name": "Emirkan Oktay",
+    "issue_url": "https://github.com/VB10/staj2025/issues/402",
     "duration": "6-hafta",
-    "location": "uzaktan,yüzyüze",
-    "intern_type": "gönüllü",
-    "category": "data-science,backend,frontend,mobile",
-    "page": 8,
-    "folderName": "12may",
-    "totalCount": 249
+    "location": "yüzyüze,uzaktan",
+    "intern_type": "zorunlu",
+    "category": "frontend",
+    "page": 9,
+    "folderName": "26may",
+    "totalCount": 299
 }
